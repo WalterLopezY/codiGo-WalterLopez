@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: blueviolet;
+        }
+
+        .titulares, .noticia{
+            border: 1px solid red;
+        }
+
+        .titulares{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .noticia{
+            max-width: 200px;
+        }
+
+        header{
+            /* todo el espacio util del viewport */
+            width: 100vw;
+            height: 100vh;
+        }
+        /*hoja de css, aparte, solo para cierto ancho*/
+        @media screen and (max-width:768px){
+        
+            h1{
+                background-color: aquamarine;
+            }
+            .titulares{
+                border: 1px solid blue;
+            }
+        }
+        /* max hasta 576*/
+        /* mix desde 576 a + */
+        @media screen and (max-width:576px){
+            h1{
+                background-color: orangered;
+            }
+            .titulares{
+                flex-direction: column;
+            }
+            .noticia{
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Titulo</h1>
+    </header>
+    <main>
+        <section class="titulares">
+            <div class="noticia">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, fugit!
+                </p>
+            </div>
+            <div class="noticia">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, asperiores.
+                </p>
+            </div>
+            <div class="noticia">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, error.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
